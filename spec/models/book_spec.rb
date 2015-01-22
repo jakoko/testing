@@ -7,7 +7,7 @@ RSpec.describe Book, :type => :model do
   	end
 
   	it "is invalid without a title" do
-  		book = FactoryGirl.build(:book, firstname: nil)
+  		book = FactoryGirl.build(:book, title: nil)
   		expect(book).to be_invalid
   	end
 
