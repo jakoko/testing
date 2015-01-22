@@ -17,7 +17,7 @@ RSpec.describe Book, :type => :model do
     end
 
   	it "is invalid without a genre" do
-      book = FactoryGirl.build(:book, author: nil)
+      book = FactoryGirl.build(:book, genre: nil)
       expect(book).to be_invalid
     end
 
