@@ -27,6 +27,9 @@ RSpec.describe Book, :type => :model do
     end
 
 
-  	it "is valid without a personal review"
+  	it "is valid without a personal review" do
+      book = FactoryGirl.build(:book, personal_review: nil)
+      expect(book).to be_valid
+    end
 
 end
