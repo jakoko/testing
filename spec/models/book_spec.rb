@@ -21,7 +21,12 @@ RSpec.describe Book, :type => :model do
       expect(book).to be_invalid
     end
 
-  	it "is valid without year of first publication"
+  	it "is valid without year of first publication" do
+      book = FactoryGirl.build(:book, year_published: nil)
+      expect(book).to be_valid
+    end
+
+
   	it "is valid without a personal review"
 
 end
